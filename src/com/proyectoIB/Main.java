@@ -19,7 +19,7 @@ public class Main {
         solver.addEdge(2, 3, 5);
         solver.addEdge(3, 4, 3);
         min=solver.dijkstra(0, 4);
-        System.out.println("Pasos del camino mas corto: "+min);
+        System.out.println("Pasos del camino mas dentro de nuestro sistema: "+min);
     }
     // An edge class to represent a directed edge
     // between two nodes with a certain cost.
