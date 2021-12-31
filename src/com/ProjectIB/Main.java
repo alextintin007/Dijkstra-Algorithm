@@ -1,15 +1,13 @@
-package com.proyectoIB;
+package com.ProjectIB;
+
+import java.util.*;
+
 import static java.lang.Math.max;
 import static java.lang.Math.min;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.NoSuchElementException;
 
 public class Main {
     public static void main(String[] args) {
-        int n=6;
+        int n=5;
         double min=0;
         Main solver =  new Main(n);
         solver.addEdge(0, 1, 4);
@@ -18,8 +16,10 @@ public class Main {
         solver.addEdge(2, 1, 2);
         solver.addEdge(2, 3, 5);
         solver.addEdge(3, 4, 3);
+
         min=solver.dijkstra(0, 4);
-        System.out.println("Pasos del camino mas dentro de nuestro sistema: "+min);
+        System.out.println("Pasos del camino mas corto dentro de nuestro sistema: "+min);
+
     }
     // An edge class to represent a directed edge
     // between two nodes with a certain cost.
@@ -93,13 +93,11 @@ public class Main {
         dist = new double[n];
         Arrays.fill(dist, Double.POSITIVE_INFINITY);
         dist[start] = 0.0;
-
         boolean[] visited = new boolean[n];
         prev = new Integer[n];
 
         while (!ipq.isEmpty()) {
             int nodeId = ipq.peekMinKeyIndex();
-
             visited[nodeId] = true;
             double minValue = ipq.pollMinValue();
 
@@ -118,10 +116,19 @@ public class Main {
                 if (newDist < dist[edge.to]) {
                     prev[edge.to] = nodeId;
                     dist[edge.to] = newDist;
+
                     // Insert the cost of going to a node for the first time in the PQ,
                     // or try and update it to a better value by calling decrease.
                     if (!ipq.contains(edge.to)) ipq.insert(edge.to, newDist);
                     else ipq.decrease(edge.to, newDist);
+                }
+                if (dist[nodeId] > 3) {
+                    List<Integer> path = new ArrayList<>();
+                    for (Integer at = end; at != null; at = prev[at]) path.add(at);
+                    Collections.reverse(path);
+                    for (int i = 0; i < path.size(); i++) {
+                        System.out.println(path.get(i));
+                    }
                 }
             }
             // Once we've processed the end node we can return early (without
@@ -129,7 +136,9 @@ public class Main {
             // shorter path by routing through any other nodes since Dijkstra's is
             // greedy and there are no negative edge weights.
             if (nodeId == end) return dist[end];
+
         }
+
         // End node is unreachable.
         return Double.POSITIVE_INFINITY;
     }
