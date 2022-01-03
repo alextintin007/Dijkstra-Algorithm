@@ -31,6 +31,7 @@ public class GUIDijkstra extends JFrame  {
     private JLabel lblArrow4;
     private JLabel lblArrow3;
     private JLabel lblArrow5;
+    private JButton btnClear;
 
     JLabel displayField;
     ImageIcon image;
@@ -54,26 +55,33 @@ public class GUIDijkstra extends JFrame  {
         btnEnter.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int n=5;
+                int n=10;
                 double min=0;
                 int endNode=Integer.parseInt(txtEnd.getText());
                 Main solver =  new Main(n);
-                solver.addEdge(0, 1, 4);
-                solver.addEdge(0, 2, 1);
-                solver.addEdge(1, 3, 1);
-                solver.addEdge(2, 1, 2);
-                solver.addEdge(2, 3, 5);
-                solver.addEdge(3, 4, 3);
+                solver.addEdge(0, 1, 8);
+                solver.addEdge(1, 2, 13);
+                solver.addEdge(1, 3, 7);
+                solver.addEdge(1, 4, 7);
+                solver.addEdge(2, 6, 18);
+                solver.addEdge(3, 5, 5);
+                solver.addEdge(4, 5, 6);
+                solver.addEdge(5, 8, 3);
+                solver.addEdge(6, 7, 9);
+                solver.addEdge(6, 9, 12);
+                solver.addEdge(7, 9, 10);
+                solver.addEdge(7, 8, 11);
+                solver.addEdge(8, 7, 11);
                 min=solver.dijkstra(0, endNode);
                 System.out.println("Pasos del camino mas corto dentro de nuestro sistema: "+min);
                 lblDistance.setText(Double.toString(min));
 
                 List<Integer> path = new ArrayList<>();
-                path=solver.dijkstraList(0,4);
+                path=solver.dijkstraList(0,endNode);
                 for (int i = 0; i < path.size(); i++) {
                     System.out.println(path.get(i));
                 }
-                for (int i = 0; i <5; i++) {
+                for (int i = 0; i < path.size(); i++) {
                     switch (path.get(i)){
                         case 0:
                             rbt0.setSelected(true);
@@ -109,6 +117,23 @@ public class GUIDijkstra extends JFrame  {
                     }
 
                 }
+            }
+        });
+        btnClear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                rbt0.setSelected(true);
+                rbt1.setSelected(false);
+                rbt2.setSelected(false);
+                rbt3.setSelected(false);
+                rbt4.setSelected(false);
+                rbt5.setSelected(false);
+                rbt6.setSelected(false);
+                rbt7.setSelected(false);
+                rbt8.setSelected(false);
+                rbt9.setSelected(false);
+                lblDistance.setText(null);
+                txtEnd.setText(null);
             }
         });
     }

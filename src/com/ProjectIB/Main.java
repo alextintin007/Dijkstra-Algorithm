@@ -10,13 +10,28 @@ public class Main {
         int n=5;
         double min=0;
         Main solver =  new Main(n);
+
         solver.addEdge(0, 1, 4);
         solver.addEdge(0, 2, 1);
         solver.addEdge(1, 3, 1);
         solver.addEdge(2, 1, 2);
         solver.addEdge(2, 3, 5);
         solver.addEdge(3, 4, 3);
-
+        /*
+        solver.addEdge(0, 1, 8);
+        solver.addEdge(1, 2, 13);
+        solver.addEdge(1, 3, 7);
+        solver.addEdge(1, 4, 7);
+        solver.addEdge(2, 6, 18);
+        solver.addEdge(3, 5, 5);
+        solver.addEdge(4, 5, 6);
+        solver.addEdge(5, 8, 3);
+        solver.addEdge(6, 7, 9);
+        solver.addEdge(6, 9, 12);
+        solver.addEdge(7, 9, 10);
+        solver.addEdge(7, 8, 11);
+        solver.addEdge(8, 7, 11);
+        */
         min=solver.dijkstra(0, 4);
         System.out.println("Pasos del camino mas corto dentro de nuestro sistema: "+min);
         // A list that defines the exact & ordered path with the minimum distance
@@ -190,7 +205,7 @@ public class Main {
                     if (!ipq.contains(edge.to)) ipq.insert(edge.to, newDist);
                     else ipq.decrease(edge.to, newDist);
                 }
-                if (dist[nodeId] > 3) {
+                if (dist[nodeId] > 32) {
                     List<Integer> path = new ArrayList<>();
                     for (Integer at = end; at != null; at = prev[at]) path.add(at);
                     Collections.reverse(path);
