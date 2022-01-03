@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="251"/>
+      <xy x="20" y="20" width="584" height="263"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -24,7 +24,7 @@
         </constraints>
         <properties/>
       </component>
-      <grid id="10f40" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="10f40" layout-manager="GridLayoutManager" row-count="7" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -34,7 +34,138 @@
           <html.disable class="java.lang.Boolean" value="false"/>
         </clientProperties>
         <border type="none"/>
-        <children/>
+        <children>
+          <component id="61a9" class="javax.swing.JRadioButton" binding="rbt3">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="3 →(5)"/>
+            </properties>
+          </component>
+          <component id="23a66" class="javax.swing.JRadioButton" binding="rbt5">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="5 →(3)"/>
+            </properties>
+          </component>
+          <component id="5d1da" class="javax.swing.JRadioButton" binding="rbt8">
+            <constraints>
+              <grid row="0" column="6" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="8"/>
+            </properties>
+          </component>
+          <component id="6a955" class="javax.swing.JRadioButton" binding="rbt4">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <selected value="false"/>
+              <text value="4 ↗(6)"/>
+            </properties>
+          </component>
+          <component id="16382" class="javax.swing.JRadioButton" binding="rbt1">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="1 ↗(6)"/>
+            </properties>
+          </component>
+          <component id="8117d" class="javax.swing.JLabel" binding="lblArrow1">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="↑↓(7)"/>
+            </properties>
+          </component>
+          <component id="10aa7" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="6" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="↓↑(11)"/>
+            </properties>
+          </component>
+          <component id="44b3e" class="javax.swing.JRadioButton" binding="rbt6">
+            <constraints>
+              <grid row="5" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="6 →(12)"/>
+            </properties>
+          </component>
+          <component id="2d12f" class="javax.swing.JRadioButton" binding="rbt9">
+            <constraints>
+              <grid row="5" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="9"/>
+            </properties>
+          </component>
+          <component id="ab243" class="javax.swing.JRadioButton" binding="rbt7">
+            <constraints>
+              <grid row="3" column="6" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="7 ↘︎(10)"/>
+            </properties>
+          </component>
+          <component id="18464" class="javax.swing.JRadioButton" binding="rbt2">
+            <constraints>
+              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="2 -----"/>
+            </properties>
+          </component>
+          <component id="607f8" class="javax.swing.JLabel" binding="lblArrow3">
+            <constraints>
+              <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="-------------"/>
+            </properties>
+          </component>
+          <component id="972fc" class="javax.swing.JLabel" binding="lblArrow4">
+            <constraints>
+              <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="-------↗(18)"/>
+            </properties>
+          </component>
+          <component id="ec44a" class="javax.swing.JLabel" binding="lblArrow2">
+            <constraints>
+              <grid row="3" column="1" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="↓(13)"/>
+            </properties>
+          </component>
+          <component id="771b6" class="javax.swing.JLabel" binding="lblArrow5">
+            <constraints>
+              <grid row="4" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="             ↗(9)"/>
+            </properties>
+          </component>
+          <component id="2bf24" class="javax.swing.JRadioButton" binding="rbt0">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="1" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <selected value="true"/>
+              <text value="0   →(8)"/>
+            </properties>
+          </component>
+        </children>
       </grid>
       <component id="b0966" class="javax.swing.JButton" binding="btnEnter">
         <constraints>
